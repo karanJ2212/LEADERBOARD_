@@ -1,11 +1,14 @@
+// eslint-disable-next-line no-undef, no-unused-vars
 const path = require("path");
+// eslint-disable-next-line no-undef, no-unused-vars
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+// eslint-disable-next-line no-undef, no-unused-vars
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "[name].js",
+    // eslint-disable-next-line no-undef, no-unused-vars
     path: path.resolve(__dirname, "dist"),
     clean: true,
     publicPath: "/",

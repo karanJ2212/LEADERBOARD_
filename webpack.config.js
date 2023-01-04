@@ -11,7 +11,6 @@ module.exports = {
     // eslint-disable-next-line no-undef, no-unused-vars
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: "/",
   },
   optimization: {
     runtimeChunk: "single",

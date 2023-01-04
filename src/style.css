@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 3%;
+}
+
+.container {
+  display: flex;
+  margin: 5%;
+  justify-content: space-between;
+}
+
+.ScoreBoard {
+  width: 40%;
+}
+
+.scoreboardHeading {
+  display: flex;
+  align-items: center;
+}
+
+#refresh {
+  height: 2rem;
+  width: 5rem;
+  margin-left: 2%;
+}
+
+.EnterBoard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-between;
+  height: 25vh;
+  margin-right: 5%;
+}
+
+.refresh {
+  display: inline;
+}
+
+.list {
+  padding: 0;
+  border: 1px solid black;
+}
+
+.list li {
+  list-style: none;
+  padding: 2%;
+  margin: 0;
+}
+
+.list li:nth-child(even) {
+  background: rgb(192, 192, 192);
+}
+
+.list li:nth-child(odd) {
+  background-color: rgb(181, 210, 244);
+}
+
+input.name {
+  margin-bottom: 5%;
+}
+
+input.score {
+  margin-bottom: 5%;
+}
+
+#submit {
+  height: 2rem;
+  width: 5rem;
+  margin-left: auto;
+}

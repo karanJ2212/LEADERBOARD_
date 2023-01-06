@@ -2,16 +2,38 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: 3%;
+
+  /* height: 100vh; */
+  overflow-y: hidden;
+
+  /* max-height: 600px; */
+
+  /* width: 1000px; */
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image:
+    url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"),
+    url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
+  background-repeat: repeat-x;
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
 }
 
 .container {
   display: flex;
-  margin: 5%;
+  margin: 1% 5%;
   justify-content: space-between;
 }
 
 .ScoreBoard {
   width: 40%;
+
+  /* height: 30vh; */
+
+  /* padding-bottom: 10%; */
 }
 
 .scoreboardHeading {
@@ -29,22 +51,44 @@ body {
   display: flex;
   flex-direction: column;
   width: 30%;
-  justify-content: space-between;
-  height: 25vh;
+
+  /* justify-content: space-between;
+  height: 25vh; */
   margin-right: 5%;
+}
+
+.EnterBoard input {
+  margin: 3% 0;
+
+  /* height: 14%; */
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  color: snow;
+  font-size: 1rem;
+}
+
+#nameInput {
+  background: rgb(10 10 72);
+}
+
+#scoreInput {
+  background-color: rgb(181, 210, 244);
 }
 
 .refresh {
   display: inline;
 }
 
-.list {
-  padding: 0;
-  border: 1px solid black;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+/* .list {
+  overflow-y: scroll;
 }
+.list::-webkit-scrollbar {
+  display: none;
+} */
 
 .list li {
   list-style: none;
@@ -53,7 +97,9 @@ body {
 }
 
 .list li:nth-child(even) {
-  background: rgb(192, 192, 192);
+  background: rgb(10 10 72);
+  color: white;
+  font-size: 1rem;
 }
 
 .list li:nth-child(odd) {
@@ -68,48 +114,27 @@ input.score {
   margin-bottom: 5%;
 }
 
-#submit {
-  margin-left: auto;
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
-  --color: #373b44;
-
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background: conic-gradient(
-      from 90deg at var(--b) var(--b),
-      #0000 90deg,
-      var(--color) 0
-    )
-    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-    calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
-  font-size: 16px;
-
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-#submit:hover,
-#submit:focus-visible {
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: 0.05em;
+.heading {
+  width: 375px;
+  margin: 0;
 }
 
-.button-89:active {
-  background: var(--color);
-  color: #fff;
+.addScore,
+.recentScore {
+  width: fit-content;
 }
 
 /* CSS */
-.list {
+.list,
+.heading,
+.addScore,
+.recentScore {
   padding: 0.6em;
   border: none;
   outline: none;
@@ -124,20 +149,24 @@ input.score {
   touch-action: manipulation;
 }
 
-.list:before {
+.list::before,
+.heading::before,
+.addScore::before,
+.recentScore::before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  background:
+    linear-gradient(
+      45deg,
+      #f00,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #f00
+    );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -156,15 +185,20 @@ input.score {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
 }
 
-.list:after {
+.list::after,
+.heading::after,
+.addScore::after,
+.recentScore::after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -174,4 +208,71 @@ input.score {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+@keyframes para {
+  100% {
+    background-position:
+      -5000px 20%,
+      -800px 95%,
+      500px 50%,
+      1000px 100%,
+      400px 0;
+  }
+}
+
+/* CSS */
+#refresh,
+#submit {
+  margin-left: auto;
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#submit:active,
+#submit:hover,
+#refresh:active,
+#refresh:hover {
+  outline: 0;
+}
+
+#refresh span,
+#submit span {
+  background-color: rgb(5, 6, 45);
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+#refresh:hover span,
+#submit:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  #refresh,
+  #submit {
+    font-size: 24px;
+    min-width: 196px;
+  }
 }

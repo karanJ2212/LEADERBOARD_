@@ -79,6 +79,7 @@
 # 🤝 Contributing:
 Contributions, issues, and feature requests are welcome!
 Feel free to check the issues page.
+https://github.com/karanJ2212/LEADERBOARD_/issues
 
 # ⭐️ Show your support
 If you like this project kindly send to me an e-mail expressing it, it would make my day and fuel my motivation.
@@ -94,4 +95,4 @@ I would like to thank Microverse team for this journey.
 
 # 📝 License:
 This project is MIT licensed.
-https://github.com/karanJ2212/LEADERBOARD_/blob/add-license-1/LICENSE.md
+https://github.com/karanJ2212/LEADERBOARD_/blob/develop/LICENSE.md

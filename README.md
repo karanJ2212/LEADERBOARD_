@@ -94,3 +94,4 @@ I would like to thank Microverse team for this journey.
 
 # 📝 License:
 This project is MIT licensed.
+https://github.com/karanJ2212/LEADERBOARD_/blob/add-license-1/LICENSE.md
